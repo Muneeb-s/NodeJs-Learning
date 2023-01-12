@@ -2,11 +2,13 @@
 
 const {sum} = require('./helpers.js');
 
-// // var let const
+const http = require('http'); // no need to give path they are automatically added
 
-// // const recommended
+const server = http.createServer((req, res) => {
+    res.end("Hello world from node server");
+})
 
-// // if value will change over time then use 'let' otherwise use const
+server.listen('3000');
 
 const total = sum(10, 200);
 

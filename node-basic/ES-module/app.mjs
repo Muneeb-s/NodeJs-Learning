@@ -3,6 +3,15 @@
 // import helper from './helpers.mjs';
 import { sum } from "./helpers.mjs";
 
+import { createServer } from "http"
+
+const server = createServer((req, res)=>{
+    res.end("Hello world from ES node");
+})
+
+server.listen('3000');
+
+console.log('Server is running on port 3000')
 // var let const
 
 // const recommended
