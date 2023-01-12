@@ -1,6 +1,7 @@
 // console.log("PROCESS: ", process);
 
-import helper from './helpers.mjs';
+// import helper from './helpers.mjs';
+import { sum } from "./helpers.mjs";
 
 // var let const
 
@@ -8,6 +9,7 @@ import helper from './helpers.mjs';
 
 // if value will change over time then use 'let' otherwise use const
 
-const total = helper.sum(10, 200);
+// const total = helper.sum(10, 200);
+const total = sum(10, 200);
 
 console.log("TOTAL: " + total);

@@ -1,7 +1,10 @@
-function sum(a,b){
-    return a+b;
-}
+// function sum(a,b){
+//     return a+b;
+// }
 
-export default {
-    sum
-}
+// export default {
+//     sum
+// }
+
+export function sum(a,b) { return a + b; }
+
