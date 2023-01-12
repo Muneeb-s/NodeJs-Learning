@@ -1,15 +1,12 @@
-// console.log("PROCESS: ", process);
 
-const {sum} = require('./helpers.js');
+const express = require('express');
 
-const http = require('http'); // no need to give path they are automatically added
+const app = express();
 
-const server = http.createServer((req, res) => {
-    res.end("Hello world from node server really updated");
+app.get('/', (req, res)=>{
+    res.send("Hi there from express");
 })
 
-server.listen('3000');
+app.listen('3000');
 
-const total = sum(10, 200);
 
-console.log("TOTAL: " + total);
