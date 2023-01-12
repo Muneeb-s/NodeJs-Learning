@@ -1,6 +1,6 @@
 // console.log("PROCESS: ", process);
 
- const helper = require('./helpers.js');
+const {sum} = require('./helpers.js');
 
 // // var let const
 
@@ -8,6 +8,6 @@
 
 // // if value will change over time then use 'let' otherwise use const
 
-const total = helper.sum(10, 200);
+const total = sum(10, 200);
 
 console.log("TOTAL: " + total);
