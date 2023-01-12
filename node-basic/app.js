@@ -1,14 +1,13 @@
-function sum(a,b){
-    return a+b;
-}
+console.log("PROCESS: ", process);
 
+// const helper = require('./helpers.js');
 
-// var let const
+// // var let const
 
-// const recommended
+// // const recommended
 
-// if value will change over time then use 'let' otherwise use const
+// // if value will change over time then use 'let' otherwise use const
 
-const total = sum(10, 200);
+// const total = helper.sum(10, 200);
 
-console.log(total);
+// console.log("TOTAL: " + total);
