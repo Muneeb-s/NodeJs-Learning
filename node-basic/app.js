@@ -1,34 +1,19 @@
-
-// const express = require('express');
-
-// const app = express();
-
-// app.get('/', (req, res)=>{
-//     res.send("Hi there from express");
-// })
-
-// app.listen('3000');
-
-
-
 const fs = require('fs')
 
 const fileName = 'target.txt';
 
-// Syncronous / blocking code
-// const data = fs.readFileSync(fileName);
-// console.log('data Sync: ', data.toString());
-
+const errHandler = (err) => console.log(err);
+const dataHandler = (data) => {
+    if(data)
+        console.log(data.toString())
+}
 
 // Asyncronuous / non-blocking code
-// fs.watch(fileName, () => console.log(`file changed! ${fileName}`))
-// fs.readFile(fileName, (err, data) => {
-//     if(err){
-//         console.log(err);
-//     }
-//     else{
-//         console.log('data: ', data.toString());
-//     }
-// })
+fs.watch(fileName, () => console.log(`file changed! ${fileName}`))
+fs.readFile(fileName, (err, data) => {
+    if(err) errHandler(err);
+    else dataHandler(data);
+    
+})
 
 console.log('node js async programming...?');
