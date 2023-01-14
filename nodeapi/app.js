@@ -3,7 +3,8 @@ const app = express();
 
 const mongoose = require("mongoose");
 const morgan = require("morgan");
-const bodyParser = require("body-parser")
+const bodyParser = require("body-parser");
+const expressValidator = require("express-validator");
 const dotenv = require("dotenv");
 dotenv.config();
 
@@ -26,6 +27,7 @@ const postRoutes = require('./routes/post')
 // app.use(myMiddleware);
 app.use(morgan("dev"));
 app.use(bodyParser.json());
+app.use(expressValidator());
 app.use("/", postRoutes); // now using router as middleware
 
 const port = process.env.PORT || 8080; // to use this dotenv is required
