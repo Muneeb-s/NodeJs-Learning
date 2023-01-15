@@ -22,7 +22,4 @@ exports.createPostValidator = (req, res, next) => {
 
     // proceed to next middleware
     next();
-
-
-
 }

@@ -12,6 +12,22 @@ exports.getPosts = (req, res)=>{
     .catch(err => console.log(err));
 }
 
+exports.getPostsWithId = (req, res) => {
+    const id = req.params.id;
+    const singlePost = Post.findOne({_id : {$in: [id] }})
+    .select("_id title body")
+    .then(post => {
+        // console.log();
+        res.json(post);
+    })
+    .catch(err => {
+        console.log(err)
+        res.status(400).json({
+            error: 'Invalid post ID'
+        })
+    })
+}
+
 exports.createPost = (req, res) => {
     const post = new Post(req.body)
     // console.log("CREATING POST", req.body);
